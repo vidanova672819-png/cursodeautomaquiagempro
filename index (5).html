@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Curso de Automaquiagem – Samara Duarte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Aprenda automaquiagem profissional com Samara Duarte, valorize sua beleza e ainda tenha a chance de ganhar renda extra maquiando outras pessoas." />
+
+  <!-- Fonte Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --rosa: #f38dab;
+      --rosa-escuro: #d35c86;
+      --nude: #fdf3f5;
+      --texto: #333333;
+      --cinza: #777777;
+      --branco: #ffffff;
+      --sombra: 0 15px 40px rgba(0,0,0,0.08);
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--texto);
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffeaf1, #ffe0eb);
+      padding: 18px 0;
+      border-bottom: 1px solid #ffd3e2;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--rosa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--branco);
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .logo-text-title {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .logo-text-sub {
+      font-size: 12px;
+      color: var(--cinza);
+    }
+
+    .cta-top {
+      padding: 10px 18px;
+      border-radius: 100px;
+      background: var(--rosa-escuro);
+      color: var(--branco);
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(211,92,134,0.4);
+      cursor: pointer;
+      border: none;
+      transition: transform .2s, box-shadow .2s, background .2s;
+      white-space: nowrap;
+    }
+
+    .cta-top:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 30px rgba(211,92,134,0.55);
+      background: #c34b75;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #ffeaf1, #ffe0eb);
+      padding: 40px 0 60px;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 32px;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.9);
+      font-size: 12px;
+      color: var(--cinza);
+      margin-bottom: 12px;
+    }
+
+    .badge span {
+      background: var(--rosa-escuro);
+      color: var(--branco);
+      font-size: 10px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      color: #222;
+    }
+
+    @media (min-width: 900px) {
+      .hero-title {
+        font-size: 40px;
+      }
+    }
+
+    .hero-highlight {
+      color: var(--rosa-escuro);
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--cinza);
+      margin-bottom: 18px;
+    }
+
+    .hero-list {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .hero-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .hero-list li::before {
+      content: "✔";
+      font-size: 12px;
+      margin-top: 2px;
+      color: var(--rosa-escuro);
+    }
+
+    .cta-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      background: var(--rosa-escuro);
+      color: var(--branco);
+      font-weight: 600;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 18px 40px rgba(211,92,134,0.6);
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+
+    .cta-primary span.icon {
+      font-size: 18px;
+    }
+
+    .cta-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 50px rgba(211,92,134,0.8);
+      background: #c34b75;
+    }
+
+    .cta-note {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--cinza);
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+    }
+
+    .hero-card {
+      background: var(--branco);
+      border-radius: 22px;
+      padding: 14px;
+      box-shadow: var(--sombra);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main-img {
+      border-radius: 18px;
+      object-fit: cover;
+      height: 100%;
+      max-height: 420px;
+      width: 100%;
+    }
+
+    .hero-float {
+      position: absolute;
+      right: -4px;
+      bottom: -4px;
+      background: rgba(255,255,255,0.96);
+      border-radius: 16px;
+      padding: 10px 12px;
+      font-size: 11px;
+      color: var(--cinza);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+      max-width: 220px;
+    }
+
+    .hero-float strong {
+      display: block;
+      color: var(--rosa-escuro);
+      margin-bottom: 3px;
+    }
+
+    /* Seções genéricas */
+    section {
+      padding: 50px 0;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 14px;
+      color: var(--cinza);
+      max-width: 580px;
+      margin: 0 auto 30px;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--rosa-escuro);
+      background: #ffe5f0;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    /* Para quem é */
+    .for-who-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .for-who-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .for-who-item {
+      background: var(--nude);
+      border-radius: var(--radius);
+      padding: 16px 16px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .for-who-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: var(--branco);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--rosa-escuro);
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* Cards módulos */
+    .card-grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    @media (min-width: 768px) {
+      .card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      background: var(--branco);
+      border-radius: var(--radius);
+      padding: 16px 16px 18px;
+      box-shadow: var(--sombra);
+      border-top: 4px solid #ffd1e4;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .card-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffe5f0;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .card-text {
+      font-size: 13px;
+      color: var(--cinza);
+    }
+
+    .cta-center {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: #ffe5f0;
+      color: var(--rosa-escuro);
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid #ffc7dd;
+      cursor: pointer;
+      transition: background .2s, transform .2s, box-shadow .2s;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.04);
+    }
+
+    .cta-secondary:hover {
+      background: #ffd6e8;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+    }
+
+    /* Depoimentos */
+    .testimonials-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    .testimonial-card {
+      background: var(--branco);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--sombra);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .testimonial-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #ffd1e4;
+      flex-shrink: 0;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .testimonial-tag {
+      font-size: 11px;
+      color: var(--rosa-escuro);
+      margin-bottom: 4px;
+    }
+
+    .testimonial-text {
+      font-size: 13px;
+      color: var(--cinza);
+      margin-top: 4px;
+    }
+
+    /* Seção renda extra */
+    .two-column {
+      display: grid;
+      gap: 24px;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    @media (min-width: 900px) {
+      .two-column {
+        grid-template-columns: 1.1fr 1fr;
+      }
+    }
+
+    .list-check {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .list-check li {
+      display: flex;
+      gap: 8px;
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .list-check li::before {
+      content: "•";
+      color: var(--rosa-escuro);
+      margin-top: -1px;
+      font-size: 16px;
+    }
+
+    /* FAQ */
+    .faq-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .faq-item {
+      background: #fff5f9;
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      border: 1px solid #ffd5e8;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .faq-a {
+      font-size: 13px;
+      color: var(--cinza);
+    }
+
+    /* CTA final */
+    .cta-final {
+      background: linear-gradient(135deg, #ffeaf1, #ffe0eb);
+      padding: 50px 0 60px;
+      text-align: center;
+    }
+
+    .cta-final-box {
+      max-width: 640px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.96);
+      border-radius: 24px;
+      padding: 24px 20px 26px;
+      box-shadow: var(--sombra);
+    }
+
+    .cta-final-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .cta-final-text {
+      font-size: 14px;
+      color: var(--cinza);
+      margin-bottom: 20px;
+    }
+
+    footer {
+      padding: 18px 0;
+      text-align: center;
+      font-size: 11px;
+      color: var(--cinza);
+      background: #fafafa;
+    }
+
+    footer a {
+      color: var(--rosa-escuro);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="top-bar">
+        <div class="logo">
+          <div class="logo-circle">SD</div>
+          <div>
+            <div class="logo-text-title">Samara Duarte</div>
+            <div class="logo-text-sub">Curso de Automaquiagem</div>
+          </div>
+        </div>
+        <a href="https://pay.kiwify.com.br/YaAFjE6?afid=TXOGC2c0" class="cta-top">
+          Garantir acesso com desconto
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="badge">
+            <span>nova turma</span> Vagas abertas com valor promocional
+          </div>
+          <h1 class="hero-title">
+            Automaquiagem profissional em você mesma – e a chance de
+            <span class="hero-highlight">lucrar maquiando outras pessoas</span>
+          </h1>
+          <p class="hero-subtitle">
+            Aprenda, passo a passo, as técnicas de automaquiagem da maquiadora
+            <strong>Samara Duarte</strong> para se sentir mais bonita todos os dias
+            e ainda ter a opção de ganhar renda extra atendendo amigas, familiares e clientes.
+          </p>
+          <ul class="hero-list">
+            <li>Pele resistente com truques profissionais, mesmo em pele oleosa.</li>
+            <li>Esfumado, delineado, glitter, cílios postiços e muito mais.</li>
+            <li>Aprenda a escolher os produtos certos para o seu tipo e tom de pele.</li>
+            <li>Base sólida para oferecer serviços de maquiagem e criar uma renda extra.</li>
+          </ul>
+          <a href="https://pay.kiwify.com.br/YaAFjE6?afid=TXOGC2c0" class="cta-primary">
+            <span class="icon">💄</span>
+            QUERO APRENDER AUTOMAQUIAGEM E LUCRAR COM ISSO
+          </a>
+          <div class="cta-note">
+            Acesso online pela plataforma Kiwify · Compra segura · Oferta por tempo limitado
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="hero-card">
+            <!-- TROCAR IMAGEM PRINCIPAL -->
+            <img src="https://images.pexels.com/photos/3762876/pexels-photo-3762876.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                 alt="Mulher se automaquiando"
+                 class="hero-main-img" />
+            <div class="hero-float">
+              <strong>Mais de 5.000 alunas já passaram pelos cursos da Samara*</strong>
+              Conteúdo passo a passo, explicado de forma simples e pensado para mulheres reais, com rotinas reais.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM É -->
+  <section>
+    <div class="container">
+      <div class="pill">para quem é esse curso</div>
+      <h2 class="section-title">Você se identifica com isso?</h2>
+      <p class="section-subtitle">
+        Se alguma dessas situações faz parte do seu dia a dia, o Curso de Automaquiagem da Samara Duarte foi criado exatamente para você.
+      </p>
+
+      <div class="for-who-grid">
+        <div class="for-who-item">
+          <div class="for-who-icon">😕</div>
+          <div>
+            Você faz maquiagem, mas sente que ela não dura, fica oleosa ou não valoriza como gostaria.
+          </div>
+        </div>
+        <div class="for-who-item">
+          <div class="for-who-icon">💸</div>
+          <div>
+            Está cansada de gastar com bases, corretivos e produtos que não combinam com o seu tom ou tipo de pele.
+          </div>
+        </div>
+        <div class="for-who-item">
+          <div class="for-who-icon">🎉</div>
+          <div>
+            Quer se arrumar para festas, encontros e eventos sem depender sempre de salão e horários apertados.
+          </div>
+        </div>
+        <div class="for-who-item">
+          <div class="for-who-icon">💰</div>
+          <div>
+            Sonha em transformar a maquiagem em uma possibilidade de renda extra, maquiando amigas, familiares e clientes.
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-center">
+        <a href="https://pay.kiwify.com.br/YaAFjE6?afid=TXOGC2c0" class="cta-secondary">
+          Sim, eu me identifico – quero aprender com a Samara
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- O QUE VAI APRENDER -->
+  <section style="background: #fff7fa;">
+    <div class="container">
+      <div class="pill">conteúdo do curso</div>
+      <h2 class="section-title">O que você vai aprender por dentro do curso</h2>
+      <p class="section-subtitle">
+        Um passo a passo organizado para você dominar desde a preparação de pele até olhos marcantes, glitter e técnicas que também servem para maquiar outras pessoas.
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">✨</div>
+          <div class="card-title">Pele resistente com técnicas profissionais</div>
+          <div class="card-text">
+            Como preparar a pele para diferentes tipos e climas, combinando primer, base, corretivo e pó para uma maquiagem bonita e duradoura.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🎨</div>
+          <div class="card-title">Colorimetria e produtos certos</div>
+          <div class="card-text">
+            Entenda princípios básicos de colorimetria para acertar o tom da base, corretivo e sombras que valorizam seu tom de pele, evitando compras erradas.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">💗</div>
+          <div class="card-title">Contorno, blush, iluminação & acabamento</div>
+          <div class="card-text">
+            Posicionamento ideal de contorno, blush e iluminador para harmonizar o rosto, suavizar imperfeições e destacar seus pontos fortes.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">👁️</div>
+          <div class="card-title">Olhos de impacto: esfumado, festa e foxy eyes</div>
+          <div class="card-text">
+            Técnicas para esfumado clássico, olho de festa com glitter, foxy eyes, delineado e aplicação de cílios postiços, do básico ao avançado.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🖌️</div>
+          <div class="card-title">Pincéis, esponjas e kit inteligente</div>
+          <div class="card-text">
+            Saiba quais pincéis realmente precisa, como usar cada um e como montar um kit básico eficiente, aproveitando melhor o que você já tem.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">💼</div>
+          <div class="card-title">Base para renda extra com maquiagem</div>
+          <div class="card-text">
+            Ao dominar as técnicas em você, fica muito mais fácil replicar em outras pessoas, criando uma oportunidade real de atender clientes e gerar renda extra.
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-center">
+        <a href="https://pay.kiwify.com.br/YaAFjE6?afid=TXOGC2c0" class="cta-primary" style="margin-top:20px;">
+          <span class="icon">🚀</span>
+          QUERO ACESSO AO CURSO COMPLETO DE AUTOMAQUIAGEM
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section>
+    <div class="container">
+      <div class="pill">depoimentos reais</div>
+      <h2 class="section-title">Elas decidiram aprender – e olha o que estão dizendo</h2>
+      <p class="section-subtitle">
+        Veja relatos de alunas que começaram apenas querendo se maquiar melhor e hoje também usam o que aprenderam como forma de renda extra.
+      </p>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <!-- TROCAR FOTO ALUNA 1 -->
+            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="Aluna 1" />
+          </div>
+          <div>
+            <div class="testimonial-tag">Automaquiagem + renda extra</div>
+            <div class="testimonial-name">Patrícia S.</div>
+            <div class="testimonial-text">
+              “Sempre precisei de salão para qualquer evento. Depois do curso, consigo fazer minha própria maquiagem de festa e ainda maquiar minha irmã e amigas. Já recuperei o valor investido fazendo algumas makes pagas.”
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <!-- TROCAR FOTO ALUNA 2 -->
+            <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="Aluna 2" />
+          </div>
+          <div>
+            <div class="testimonial-tag">Base certa e pele perfeita</div>
+            <div class="testimonial-name">Luana M.</div>
+            <div class="testimonial-text">
+              “Eu não acertava base de jeito nenhum. Hoje sei testar na loja, sei o acabamento que fica melhor na minha pele e minha maquiagem dura muito mais. Economizei bastante evitando compras erradas.”
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <!-- TROCAR FOTO ALUNA 3 -->
+            <img src="https://images.pexels.com/photos/774866/pexels-photo-774866.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="Aluna 3" />
+          </div>
+          <div>
+            <div class="testimonial-tag">De hobby a renda extra</div>
+            <div class="testimonial-name">Camila R.</div>
+            <div class="testimonial-text">
+              “Comecei só para me maquiar melhor. Postei algumas fotos e começaram a me chamar para maquiar em aniversário e formatura. Virou uma renda extra que ajuda muito no fim do mês.”
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <!-- TROCAR FOTO ALUNA 4 -->
+            <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="Aluna 4" />
+          </div>
+          <div>
+            <div class="testimonial-tag">Olhos e esfumado</div>
+            <div class="testimonial-name">Ana P.</div>
+            <div class="testimonial-text">
+              “Nunca imaginei que conseguiria fazer um esfumado bonito. As aulas são claras, parece que a Samara está do meu lado explicando. Hoje amo me maquiar para sair.”
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cta-center" style="margin-top:26px;">
+        <a href="https://pay.kiwify.com.br/YaAFjE6?afid=TXOGC2c0" class="cta-secondary">
+          Quero ser a próxima aluna a ter esse resultado
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RENDA EXTRA -->
+  <section style="background:#fff7fa;">
+    <div class="container">
+      <div class="pill">renda extra com maquiagem</div>
+      <h2 class="section-title">Use o que aprender para criar uma nova fonte de renda</h2>
+      <p class="section-subtitle">
+        Além de se sentir mais bonita e segura, você pode transformar a maquiagem em um serviço, atendendo pessoas que já confiam em você e criando uma renda extra.
+      </p>
+
+      <div class="two-column">
+        <div>
+          <h3 style="font-size:18px; margin-bottom:8px;">Comece pequeno, ainda em casa</h3>
+          <p style="font-size:14px; color:var(--cinza); margin-bottom:10px;">
+            Você não precisa de um grande estúdio para começar. Com as técnicas certas, é possível atender:
+          </p>
+          <ul class="list-check">
+            <li>Amigas que querem se arrumar para festas e eventos.</li>
+            <li>Familiares em datas especiais, como casamentos e formaturas.</li>
+            <li>Colegas de trabalho e conhecidas da sua região.</li>
+            <li>Clientes que vão chegando por indicação, conforme veem suas makes prontas.</li>
+          </ul>
+
+          <h3 style="font-size:18px; margin:16px 0 8px;">Um passo por vez, no seu ritmo</h3>
+          <p style="font-size:14px; color:var(--cinza);">
+            Ao dominar preparação de pele, olhos e acabamento, você se sente segura para reproduzir a maquiagem em outros rostos.
+            Com o tempo, pode:
+          </p>
+          <ul class="list-check">
+            <li>Ajustar valores conforme ganha experiência.</li>
+            <li>Atender especialmente em finais de semana.</li>
+            <li>Divulgar seu trabalho em redes sociais com fotos das suas produções.</li>
+          </ul>
+
+          <div class="cta-center" style="text-align:left; margin-top:18px;">
+            <a href="https://pay.kiwify.com.br/YaAFjE6?afid=TXOGC2c0" class="cta-primary">
+              <span class="icon">💼</span>
+              QUERO COMEÇAR E TER ESSA POSSIBILIDADE
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="hero-card" style="border-radius:24px;">
+            <!-- TROCAR IMAGEM RENDA EXTRA -->
+            <img src="https://images.pexels.com/photos/3762873/pexels-photo-3762873.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                 alt="Mulher maquiando outra"
+                 class="hero-main-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE A SAMARA -->
+  <section>
+    <div class="container">
+      <div class="pill">quem vai te ensinar</div>
+      <h2 class="section-title">Sobre a maquiadora Samara Duarte</h2>
+      <p class="section-subtitle">
+        Maquiadora e penteadista, começou na área aos 17 anos, já atendeu inúmeras noivas, formandas e clientes, e hoje compartilha seus conhecimentos com milhares de alunas em todo o Brasil.
+      </p>
+
+      <div class="two-column">
+        <div>
+          <!-- TROCAR FOTO SAMARA -->
+          <div class="hero-card" style="border-radius:24px;">
+            <img src="https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                 alt="Maquiadora profissional"
+                 class="hero-main-img" />
+          </div>
+        </div>
+        <div>
+          <p style="font-size:14px; color:var(--cinza); margin-bottom:10px;">
+            Com anos de experiência atendendo clientes em eventos especiais e ministrando cursos presenciais e online, Samara desenvolveu um método
+            de ensino direto, simples e pensado para mulheres comuns, sem complicação.
+          </p>
+          <p style="font-size:14px; color:var(--cinza); margin-bottom:10px;">
+            Ao longo da jornada, já impactou mais de <strong>5.000 alunas</strong> com seus cursos, ajudando mulheres a ganharem autonomia na própria maquiagem
+            e a transformarem essa habilidade em uma oportunidade de renda extra.
+          </p>
+          <p style="font-size:14px; color:var(--cinza);">
+            Agora, através do Curso de Automaquiagem, ela reúne suas principais técnicas e segredos em um conteúdo organizado, que você pode assistir com calma,
+            no seu tempo, direto do seu celular, tablet ou computador.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA / FAQ -->
+  <section style="background:#fff7fa%;">
+    <div class="container">
+      <div class="pill">como funciona</div>
+      <h2 class="section-title">Como o curso funciona na prática</h2>
+      <p class="section-subtitle">
+        Acesso simples, conteúdo online e suporte para você aprender no seu ritmo, com transparência em cada etapa.
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">💻</div>
+          <div class="card-title">100% online</div>
+          <div class="card-text">
+            Assista às aulas pelo celular, tablet ou computador, de onde estiver, bastando ter conexão com a internet.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">📧</div>
+          <div class="card-title">Acesso pela Kiwify</div>
+          <div class="card-text">
+            Após a confirmação do pagamento, você recebe por e-mail seus dados para entrar na área de membros e começar a assistir.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">⏱️</div>
+          <div class="card-title">Estude no seu tempo</div>
+          <div class="card-text">
+            As aulas ficam gravadas e você pode pausar, voltar e rever quantas vezes quiser dentro do período de acesso.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎓</div>
+          <div class="card-title">Certificado de conclusão</div>
+          <div class="card-text">
+            Ao finalizar o conteúdo, você pode emitir seu certificado como comprovação do curso concluído.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <div class="card-title">Compra segura</div>
+          <div class="card-text">
+            Pagamento processado pela Kiwify, com segurança e transparência. Seus dados são protegidos.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔄</div>
+          <div class="card-title">Garantia</div>
+          <div class="card-text">
+            Dentro do prazo de garantia informado na página de pagamento, você pode solicitar reembolso se achar que o curso não é para você.
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size:18px; text-align:center; margin:32px 0 10px;">Dúvidas comuns antes de entrar</h3>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-q">Preciso saber maquiar para aproveitar o curso?</div>
+          <div class="faq-a">
+            Não. O conteúdo é pensado tanto para iniciantes quanto para quem já se maquia e quer entender técnicas profissionais, passo a passo.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Vou conseguir usar o que aprender em outras pessoas?</div>
+          <div class="faq-a">
+            Sim. Ao praticar as técnicas em você, fica muito mais fácil reproduzir em outros rostos, o que abre portas para oferecer serviços de maquiagem como renda extra.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Em quanto tempo vou ver resultado?</div>
+          <div class="faq-a">
+            Isso varia de pessoa para pessoa. Quanto mais você praticar e aplicar o passo a passo, mais rápido vai notar diferença na qualidade das suas maquiagens.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Vou precisar de muitos produtos caros?</div>
+          <div class="faq-a">
+            Não necessariamente. O curso mostra como montar um kit básico inteligente e como aproveitar melhor os produtos que você já tem em casa.
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-center" style="margin-top:26px;">
+        <a href="https://pay.kiwify.com.br/YaAFjE6?afid=TXOGC2c0" class="cta-primary">
+          <span class="icon">✅</span>
+          QUERO GARANTIR MEU ACESSO AGORA
+        </a>
+        <div class="cta-note">
+          Lembre-se: o acesso é online e o conteúdo fica disponível para você estudar com calma, no seu ritmo.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <div class="container">
+      <div class="cta-final-box">
+        <div class="pill" style="margin-bottom:4px;">decisão final</div>
+        <h2 class="cta-final-title">
+          Você pode continuar insegura com a maquiagem – ou dar o primeiro passo hoje
+        </h2>
+        <p class="cta-final-text">
+          Cada evento, foto e momento especial é uma chance de se olhar no espelho e se sentir confiante.
+          O Curso de Automaquiagem da Samara Duarte foi criado para te ajudar a dominar as técnicas que valorizam a sua beleza
+          e ainda abrir a possibilidade de transformar isso em uma fonte de renda extra.
+        </p>
+        <a href="https://pay.kiwify.com.br/YaAFjE6?afid=TXOGC2c0" class="cta-primary">
+          <span class="icon">💄</span>
+          SIM, QUERO COMEÇAR A ME MAQUIAR MELHOR E LUCRAR COM ISSO
+        </a>
+        <div class="cta-note" style="margin-top:12px;">
+          Pagamento seguro pela Kiwify · Resultados dependem da sua prática e dedicação · Acesso 100% online
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Curso de Automaquiagem – Página de Afiliado.<br />
+    Não somos a plataforma Kiwify. Todos os direitos do produto pertencem à produtora Samara Duarte.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
